@@ -17,15 +17,18 @@ class lineComparison{
 		return length;
 	}
 
-	void equality(float len1, float len2){
+	void compare(float len1, float len2){
 		Float objA = len1;
 		Float objB = len2;
-		boolean result = objA.equals(objB);
-		if(result){
-			System.out.println("Line1 and Line2 are equal in length");
+		int result = objA.compareTo(objB);
+		if(result > 0){
+			System.out.println("Line1 is greater than Line2");
+		}
+		else if(result < 0){
+			System.out.println("Line1 is less than Line2");
 		}
 		else{
-			System.out.println("Line1 and Line2 are not equal");
+			System.out.println("Line1 is equal to Line2");
 		}
 	}
 
@@ -37,7 +40,7 @@ class lineComparison{
 		System.out.println("For line 2");
 		float length2 = ln.lengthofline();
 		System.out.println("lenght of the line 2 is "+length2);
-		ln.equality(length1, length2);
+		ln.compare(length1, length2);
    }
 
 }
