@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.lang.Math;
 class lineComparison{
 
-	public float lengthofline(){
+	float lengthofline(){
 		System.out.println("Enter coordinates of point to get the length");
       Scanner sc = new Scanner(System.in);
       System.out.print("x1: ");
@@ -17,10 +17,27 @@ class lineComparison{
 		return length;
 	}
 
-	 public static void main(String[] args){
-      lineComparison ln = new lineComparison();
+	void equality(float len1, float len2){
+		Float objA = len1;
+		Float objB = len2;
+		boolean result = objA.equals(objB);
+		if(result){
+			System.out.println("Line1 and Line2 are equal in length");
+		}
+		else{
+			System.out.println("Line1 and Line2 are not equal");
+		}
+	}
+
+	public static void main(String[] args){
+     	lineComparison ln = new lineComparison();
+		System.out.println("For line 1");
       float length1 = ln.lengthofline();
-		System.out.println("lenght of the line is "+length1);
+		System.out.println("lenght of the line 1 is "+length1);
+		System.out.println("For line 2");
+		float length2 = ln.lengthofline();
+		System.out.println("lenght of the line 2 is "+length2);
+		ln.equality(length1, length2);
    }
 
 }
