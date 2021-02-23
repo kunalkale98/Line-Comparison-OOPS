@@ -17,6 +17,18 @@ class lineComparison{
 		return length;
 	}
 
+	void equality(float len1, float len2){
+      Float objA = len1;
+      Float objB = len2;
+      boolean result = objA.equals(objB);
+      if(result){
+         System.out.println("Line1 and Line2 are equal in length");
+      }
+      else{
+         System.out.println("Line1 and Line2 are not equal");
+      }
+   }
+
 	void compare(float len1, float len2){
 		Float objA = len1;
 		Float objB = len2;
@@ -40,6 +52,7 @@ class lineComparison{
 		System.out.println("For line 2");
 		float length2 = ln.lengthofline();
 		System.out.println("lenght of the line 2 is "+length2);
+		ln.equality(length1, length2);
 		ln.compare(length1, length2);
    }
 
